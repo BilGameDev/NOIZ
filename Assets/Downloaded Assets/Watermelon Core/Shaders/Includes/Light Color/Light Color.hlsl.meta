@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 6c2da481c2768b44893123a7c3829b2c
+ShaderImporter:
+  externalObjects: {}
+  defaultTextures: []
+  nonModifiableTextures: []
+  preprocessorOverride: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 292338
+  packageName: Survival Island | Template + Editor
+  packageVersion: 1.0.2
+  assetPath: Assets/Project Data/Watermelon Core/Shaders/Includes/Light Color/Light
+    Color.hlsl
+  uploadId: 697738

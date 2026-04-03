@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: febecd0204f1c5344b039896aa4cd5ac
+ShaderIncludeImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 292338
+  packageName: Survival Island | Template + Editor
+  packageVersion: 1.0.2
+  assetPath: Assets/Project Data/Watermelon Core/Shaders/Includes/Emission.hlsl
+  uploadId: 697738

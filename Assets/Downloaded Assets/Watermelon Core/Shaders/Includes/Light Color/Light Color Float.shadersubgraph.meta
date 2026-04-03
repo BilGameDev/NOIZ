@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 3762b604ad7efcd4992d5e7573021329
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: 60072b568d64c40a485e0fc55012dc9f, type: 3}
+AssetOrigin:
+  serializedVersion: 1
+  productId: 292338
+  packageName: Survival Island | Template + Editor
+  packageVersion: 1.0.2
+  assetPath: Assets/Project Data/Watermelon Core/Shaders/Includes/Light Color/Light
+    Color Float.shadersubgraph
+  uploadId: 697738

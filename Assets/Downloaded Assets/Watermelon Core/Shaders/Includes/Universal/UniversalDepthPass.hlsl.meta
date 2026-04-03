@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 1c73ad4194d090f40b492fae78dd44cf
+ShaderIncludeImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 292338
+  packageName: Survival Island | Template + Editor
+  packageVersion: 1.0.2
+  assetPath: Assets/Project Data/Watermelon Core/Shaders/Includes/Universal/UniversalDepthPass.hlsl
+  uploadId: 697738

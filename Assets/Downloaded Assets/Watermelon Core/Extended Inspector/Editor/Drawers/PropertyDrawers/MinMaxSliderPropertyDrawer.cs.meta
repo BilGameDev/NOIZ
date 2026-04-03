@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 9fa9f817f67f5804db1980fb08e4b3d2
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 292338
+  packageName: Survival Island | Template + Editor
+  packageVersion: 1.0.2
+  assetPath: Assets/Project Data/Watermelon Core/Extended Inspector/Editor/Drawers/PropertyDrawers/MinMaxSliderPropertyDrawer.cs
+  uploadId: 697738

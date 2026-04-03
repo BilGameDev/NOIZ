@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: d9c5d43e410a58a46b187bad6c073683
+ShaderIncludeImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 292338
+  packageName: Survival Island | Template + Editor
+  packageVersion: 1.0.2
+  assetPath: Assets/Project Data/Watermelon Core/Shaders/Includes/Water/WaterParams.hlsl
+  uploadId: 697738

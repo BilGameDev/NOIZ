@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 1c4a56c6ce0cf824b8c5c46716bae06d
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 292338
+  packageName: Survival Island | Template + Editor
+  packageVersion: 1.0.2
+  assetPath: Assets/Project Data/Watermelon Core/Scripts/Runtime/Utils/CoreExtensions.cs
+  uploadId: 697738

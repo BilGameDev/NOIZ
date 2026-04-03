@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: c21e04b7d8d66d5469e9c983f7d667d0
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: 625f186215c104763be7675aa2d941aa, type: 3}
+AssetOrigin:
+  serializedVersion: 1
+  productId: 292338
+  packageName: Survival Island | Template + Editor
+  packageVersion: 1.0.2
+  assetPath: Assets/Project Data/Watermelon Core/Shaders/Toon/Unlit/Toon Unlit Transparent
+    Float (Legacy).shadergraph
+  uploadId: 697738

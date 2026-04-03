@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 2a6619feda986ee439192885fb6d5039
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 292338
+  packageName: Survival Island | Template + Editor
+  packageVersion: 1.0.2
+  assetPath: Assets/Project Data/Watermelon Core/Extended Inspector/Editor/Drawers/PropertyConditions/HidePropertyDrawCondition.cs
+  uploadId: 697738

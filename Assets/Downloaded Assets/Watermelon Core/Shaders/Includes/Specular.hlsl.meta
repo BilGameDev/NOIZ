@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 9b429c11ad8b3e04e937576eb3b5ab5d
+ShaderIncludeImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 292338
+  packageName: Survival Island | Template + Editor
+  packageVersion: 1.0.2
+  assetPath: Assets/Project Data/Watermelon Core/Shaders/Includes/Specular.hlsl
+  uploadId: 697738

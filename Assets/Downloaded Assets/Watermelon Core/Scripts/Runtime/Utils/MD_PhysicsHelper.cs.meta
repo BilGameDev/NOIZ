@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: be8b872d7a8b48a4eb39709f0eafb05e
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 292338
+  packageName: Survival Island | Template + Editor
+  packageVersion: 1.0.2
+  assetPath: Assets/Project Data/Watermelon Core/Scripts/Runtime/Utils/MD_PhysicsHelper.cs
+  uploadId: 697738

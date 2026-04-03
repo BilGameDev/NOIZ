@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: d8e2a689ce0bc9245aa8251d260bad42
+ShaderIncludeImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 292338
+  packageName: Survival Island | Template + Editor
+  packageVersion: 1.0.2
+  assetPath: Assets/Project Data/Watermelon Core/Shaders/Includes/Universal/UniversalShadowsPass.hlsl
+  uploadId: 697738

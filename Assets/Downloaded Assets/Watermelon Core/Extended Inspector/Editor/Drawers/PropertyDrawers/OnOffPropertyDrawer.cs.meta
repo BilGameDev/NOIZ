@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: b5d0a6a03f365d44ea56b363b36eeefc
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 292338
+  packageName: Survival Island | Template + Editor
+  packageVersion: 1.0.2
+  assetPath: Assets/Project Data/Watermelon Core/Extended Inspector/Editor/Drawers/PropertyDrawers/OnOffPropertyDrawer.cs
+  uploadId: 697738

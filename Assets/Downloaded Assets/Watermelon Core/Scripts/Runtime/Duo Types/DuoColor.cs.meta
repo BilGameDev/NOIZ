@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: c776860be0f89ff4b94da4240a398393
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 292338
+  packageName: Survival Island | Template + Editor
+  packageVersion: 1.0.2
+  assetPath: Assets/Project Data/Watermelon Core/Scripts/Runtime/Duo Types/DuoColor.cs
+  uploadId: 697738

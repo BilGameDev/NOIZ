@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 1221cc42ddfdac042943b0ee364b83d6
+ShaderIncludeImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 292338
+  packageName: Survival Island | Template + Editor
+  packageVersion: 1.0.2
+  assetPath: Assets/Project Data/Watermelon Core/Shaders/Includes/Universal/UniversalDepthInit.hlsl
+  uploadId: 697738

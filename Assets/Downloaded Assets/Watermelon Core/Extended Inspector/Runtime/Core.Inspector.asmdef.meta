@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 320a7f1e3dd30bf4dbb1ac85ea51c249
+AssemblyDefinitionImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 292338
+  packageName: Survival Island | Template + Editor
+  packageVersion: 1.0.2
+  assetPath: Assets/Project Data/Watermelon Core/Extended Inspector/Runtime/Core.Inspector.asmdef
+  uploadId: 697738

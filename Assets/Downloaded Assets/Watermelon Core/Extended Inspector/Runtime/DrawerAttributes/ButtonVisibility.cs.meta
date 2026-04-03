@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 82b7239e23e60fb4d887eeced20c5878
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 292338
+  packageName: Survival Island | Template + Editor
+  packageVersion: 1.0.2
+  assetPath: Assets/Project Data/Watermelon Core/Extended Inspector/Runtime/DrawerAttributes/ButtonVisibility.cs
+  uploadId: 697738

@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7464374ce4f9fa74f92ca2e334650120, type: 3}
+  m_Name: NOIZ
+  m_EditorClassIdentifier: 
+  artistName: Emotional Oranges
+  noteDelay: 0
+  noteCooldown: 0.4
+  fadeDuration: 2
+  duckVolume: 0.2
+  duckDuration: 0.1
+  duckFadeDuration: 1
+  restoreFadeDuration: 0.1
+  noteStart: 5
+  noteEnd: -1
+  cutZone: 1
+  currentScore: 0
+  currentCombo: 0
+  scorePerNote: 10
+  scorePerCombo: 10
+  maxComboMultiplier: 8
+  minusScorePerMiss: 5
+  enableHaptics: 0
+  currentTracks: []

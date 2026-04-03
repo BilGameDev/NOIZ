@@ -1,0 +1,15 @@
+{
+    "name": "com.lofelt.nicevibrations",
+    "displayName": "Nice Vibration",
+    "version": "4.1.2",
+    "unity": "2018.1",
+    "description": "Built on top of Lofelt Studio SDK, Nice Vibrations is a Unity Asset which offers a universal interface to trigger HD haptic feedback on supported Unity platforms platforms at once, as well as ways to get exactly the right vibration on each platform.",
+    "keywords": ["haptic"],
+    "category": "Utility",
+    "dependencies": {
+    },
+    "author": {
+        "name": "Lofelt Studio",
+        "url": "https://github.com/Lofelt/NiceVibrations"
+  }
+}
