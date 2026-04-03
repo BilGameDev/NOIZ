@@ -1,4 +1,5 @@
 NOIZ - Rhythm Game
+
 A rhythm game inspired by Beat Saber and Fruit Ninja, featuring beat-synced gameplay with lane-based notes and swipe mechanics.
 
 🎮 Features
