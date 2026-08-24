@@ -102,7 +102,7 @@ public class ArtistDetailPopup : PopupPanel
     void ShowArtistDetails(ArtistDetails artist, List<DeezerTrack> tracks)
     {
         // Format the artist details text with HTML-like tags for TMP
-        string formattedText = $"<b><size=36>{artist.name}</size></b>\n\n" +
+        string formattedText = $"<b><size=23>{artist.name}</size></b>\n\n" +
                                $"Fans: {FormatNumber(artist.nb_fan)}\n" +
                                $"Albums: {artist.nb_album}";
         

@@ -458,7 +458,7 @@ MonoBehaviour:
   beatBrightnessBoost: 0.3
   beatBoostDuration: 0.15
   beatFlashColor: {r: 0.52201253, g: 0.011490755, b: 0.40293416, a: 1}
-  beatFlashDuration: 0.1
+  beatFlashDuration: 0
 --- !u!1 &580203550
 GameObject:
   m_ObjectHideFlags: 0

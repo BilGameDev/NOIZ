@@ -1,5 +1,6 @@
 ﻿<Solution>
   <Project Path="Assembly-CSharp.csproj" />
+  <Project Path="Unity.ShaderGraph.Editor.csproj" />
   <Project Path="Watermelon.Scripts.csproj" />
   <Project Path="Watermelon.Inspector.Editor.csproj" />
   <Project Path="Assembly-CSharp-Editor.csproj" />
@@ -8,6 +9,8 @@
   <Project Path="UnlimitedScrollUI.csproj" />
   <Project Path="Assembly-CSharp-firstpass.csproj" />
   <Project Path="Lofelt.NiceVibrations.Editor.csproj" />
+  <Project Path="Unity.UI.Shaders.Sample.Editor.csproj" />
+  <Project Path="Unity.UI.Shaders.Sample.csproj" />
   <Project Path="UnlimitedScrollUIEditor.csproj" />
   <Project Path="UnlimitedScrollUIExample.csproj" />
   <Project Path="Core.Scripts.Editor.csproj" />

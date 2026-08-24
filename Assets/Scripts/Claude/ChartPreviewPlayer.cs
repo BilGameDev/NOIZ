@@ -1,3 +1,4 @@
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -39,12 +40,12 @@ namespace RhythmGen
         float pixelsPerSecond;
         float hitY;
 
-        void Start()
+        IEnumerator Start()
         {
             if (chartBuilder == null || audioSource == null || lanesRoot == null || hitMarker == null)
             {
                 Debug.LogError("ChartPreviewPlayer: missing references.");
-                return;
+                yield break;
             }
 
             if (chartBuilder.Chart == null || chartBuilder.Chart.notes.Count == 0)
@@ -53,17 +54,62 @@ namespace RhythmGen
             if (chartBuilder.Chart == null || chartBuilder.Chart.notes.Count == 0)
             {
                 Debug.LogError("ChartPreviewPlayer: chart empty, nothing to preview.");
-                return;
+                yield break;
             }
+
+            // Wait a frame so layout (anchors, layout groups, canvas scaler etc.)
+            // has actually resolved before we read rect sizes / positions off it.
+            // Reading these in the same frame as instantiation/enable can give
+            // you stale or zeroed values.
+            yield return null;
+            Canvas.ForceUpdateCanvases();
+
+            // --- hitY: convert the hit marker's position into lanesRoot's LOCAL
+            // space, regardless of what its actual parent is. anchoredPosition
+            // is only meaningful relative to a transform's own parent, so we
+            // can't just read hitMarker.anchoredPosition.y and use it directly
+            // unless hitMarker happens to share lanesRoot's exact frame.
+            //
+            // IMPORTANT: the camera passed to these calls must match the
+            // Canvas's render mode, or the conversion silently produces
+            // garbage coordinates. Screen Space - Overlay wants `null`.
+            // Screen Space - Camera / World Space want the canvas's actual
+            // worldCamera. Using the wrong one is the #1 cause of notes
+            // ending up positioned way outside the visible/masked area.
+            var canvas = lanesRoot.GetComponentInParent<Canvas>();
+            Camera uiCamera = null;
+            if (canvas != null && canvas.renderMode != RenderMode.ScreenSpaceOverlay)
+                uiCamera = canvas.worldCamera;
+
+            Vector3 hitWorld = hitMarker.position;
+            Vector2 hitLocal;
+            RectTransformUtility.ScreenPointToLocalPointInRectangle(
+                lanesRoot,
+                RectTransformUtility.WorldToScreenPoint(uiCamera, hitWorld),
+                uiCamera,
+                out hitLocal);
+            hitY = hitLocal.y;
+
+            Debug.Log($"ChartPreviewPlayer: canvas={canvas?.renderMode}, resolved hitY={hitY:F1}, " +
+                      $"lanesRoot rect yMin={lanesRoot.rect.yMin:F1} yMax={lanesRoot.rect.yMax:F1}. " +
+                      "If hitY falls outside [yMin, yMax], the marker is outside lanesRoot's own " +
+                      "rect and notes will clip before reaching it.");
+
+            // --- spawnY: use rect.yMax, which correctly accounts for pivot
+            // (rect.height alone assumes a (0,0) pivot, which UI elements
+            // usually aren't -- default is (0.5, 0.5)).
+            float spawnY = lanesRoot.rect.yMax - 40f;
+
+            pixelsPerSecond = (spawnY - hitY) / approachTime;
+            if (pixelsPerSecond <= 0f)
+                Debug.LogWarning("ChartPreviewPlayer: computed pixelsPerSecond <= 0 -- " +
+                                  "hit marker is not below the spawn point in lanesRoot's local space. " +
+                                  "Check that hitMarker is actually positioned lower on screen than the spawn area.");
 
             audioSource.clip = chartBuilder.song;
             audioSource.Play();
             dspStart = AudioSettings.dspTime;
             playing = true;
-
-            hitY = hitMarker.anchoredPosition.y;
-            float spawnY = lanesRoot.rect.height - 40f;
-            pixelsPerSecond = (spawnY - hitY) / approachTime;
         }
 
         void Update()
@@ -85,7 +131,7 @@ namespace RhythmGen
                 var an = activeNotes[i];
                 double delta = an.note.time - songTime;
 
-                if (delta < -0.75)
+                if (delta < -4)
                 {
                     Destroy(an.rt.gameObject);
                     activeNotes.RemoveAt(i);
@@ -94,7 +140,7 @@ namespace RhythmGen
 
                 float y = hitY + (float)delta * pixelsPerSecond;
                 float laneW = lanesRoot.rect.width / Mathf.Max(1, chart.laneCount);
-                float x = -lanesRoot.rect.width * 0.5f + laneW * (an.note.lane + 0.5f);
+                float x = lanesRoot.rect.xMin + laneW * (an.note.lane + 0.5f);
                 an.rt.anchoredPosition = new Vector2(x, y);
             }
         }
