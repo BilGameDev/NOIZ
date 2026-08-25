@@ -9,6 +9,7 @@ using UnityEngine.SceneManagement;
 public class SearchManager : MonoBehaviour
 {
     [Header("Search UI")]
+    public RectTransform topArtistsManager;
     public TMP_InputField searchInput;
     public GameObject loadingIndicator;
     public TextMeshProUGUI searchStatusText;
@@ -125,6 +126,7 @@ public class SearchManager : MonoBehaviour
 
         ClearResults();
         loadingIndicator.SetActive(true);
+        topArtistsManager.gameObject.SetActive(false);
 
         if (searchStatusText != null)
         {
@@ -199,8 +201,10 @@ public class SearchManager : MonoBehaviour
     {
         ClearResults();
 
-        foreach (var artist in artists)
+        for (int i = 0; i < artists.Count; i++)
         {
+            var artist = artists[i];
+
             // Instantiate and setup
             GameObject resultItem = Instantiate(artistResultPrefab, resultsContainer);
             resultItem.SetActive(true);
@@ -208,6 +212,7 @@ public class SearchManager : MonoBehaviour
             ArtistResultItem item = resultItem.GetComponent<ArtistResultItem>();
             if (item != null)
             {
+                item.animDelay = i * 0.06f;
                 item.Setup(artist, -1, OnArtistSelected);
             }
             else
@@ -259,6 +264,7 @@ public class SearchManager : MonoBehaviour
             currentCoroutine = null;
         }
         loadingIndicator.SetActive(false);
+        topArtistsManager.gameObject.SetActive(true);
     }
 
     void OnDestroy()

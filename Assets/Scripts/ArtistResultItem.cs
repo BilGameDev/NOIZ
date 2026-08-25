@@ -2,18 +2,25 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 using System.Collections;
+using DG.Tweening;
 
 public class ArtistResultItem : MonoBehaviour
 {
     [Header("UI Elements")]
     public Image artistImage;
     public TextMeshProUGUI artistNameText;
-    public Button selectButton; 
-    
+    public Button selectButton;
+
+    [Header("Entrance Animation")]
+    public float animDuration = 0.35f;
+    public float animDelay = 0f;
+    public Ease animEase = Ease.OutBack;
+
     private ArtistData artist;
     private int index;
     private System.Action<ArtistData> onSelectCallback;
     private Coroutine imageLoadCoroutine;
+    private CanvasGroup canvasGroup;
     
     public void Setup(ArtistData artist, int index, System.Action<ArtistData> onSelect)
     {
@@ -34,6 +41,35 @@ public class ArtistResultItem : MonoBehaviour
         
         // Load artist image
         LoadArtistImage();
+
+        // Auto-animate entrance
+        AnimateIn();
+    }
+
+    public void AnimateIn()
+    {
+        // Ensure we have a CanvasGroup for fade
+        canvasGroup = GetComponent<CanvasGroup>();
+        if (canvasGroup == null)
+            canvasGroup = gameObject.AddComponent<CanvasGroup>();
+
+        canvasGroup.alpha = 0f;
+
+        // Start scale at 0
+        transform.localScale = Vector3.zero;
+
+        // Staggered entrance sequence
+        Sequence seq = DOTween.Sequence();
+        seq.SetDelay(animDelay);
+        seq.Append(transform.DOScale(1f, animDuration).SetEase(animEase));
+        seq.Join(canvasGroup.DOFade(1f, animDuration * 0.8f).SetEase(Ease.OutQuad));
+        seq.SetTarget(gameObject);
+    }
+
+    public void KillAnimations()
+    {
+        DOTween.Kill(transform);
+        DOTween.Kill(canvasGroup);
     }
     
     public void SetBackgroundColor(Color color)
@@ -98,6 +134,8 @@ public class ArtistResultItem : MonoBehaviour
     
     void OnDestroy()
     {
+        KillAnimations();
+
         if (selectButton != null)
             selectButton.onClick.RemoveListener(OnSelectClicked);
         

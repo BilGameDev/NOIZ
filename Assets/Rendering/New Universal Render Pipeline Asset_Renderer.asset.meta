@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 360ea5ea308c53e46b6c6f0d4e288a02
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 239345
+  packageName: MultiFPS - Multiplayer FPS
+  packageVersion: 1.5.10
+  assetPath: Assets/MultiFPS/Rendering/New Universal Render Pipeline Asset_Renderer.asset
+  uploadId: 870326

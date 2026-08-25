@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: e094a872c19098e4981e3ff643b8f144
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 239345
+  packageName: MultiFPS - Multiplayer FPS
+  packageVersion: 1.5.10
+  assetPath: Assets/MultiFPS/Rendering/URP_asset_renderer_WEBGL.asset
+  uploadId: 870326

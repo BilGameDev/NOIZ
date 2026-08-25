@@ -7,6 +7,8 @@ public class BootstrapManager : MonoBehaviour
 {
     [SerializeField] RectTransform beatTexture;
     [SerializeField] SimpleBeatDetection simpleBeatDetection;
+    [SerializeField] TopArtistsManager topArtistsManager;
+    [SerializeField] CanvasGroup disclaimar;
 
     [Header("Beat Scale Settings")]
     public float pulseScale = 1.2f;
@@ -20,7 +22,9 @@ public class BootstrapManager : MonoBehaviour
 
     void Start()
     {
+        topArtistsManager.GetComponent<CanvasGroup>().alpha = 0;
         originalScale = beatTexture.localScale;
+        StartCoroutine(DelayedStart());
     }
 
     void OnEnable()
@@ -48,6 +52,12 @@ public class BootstrapManager : MonoBehaviour
     IEnumerator DelayedStart()
     {
         yield return new WaitForSeconds(2f);
-        NOIZEventHandler.GoToMainScene();
+        beatTexture.DOLocalMove(new Vector3(-800, 450, 0), 1).SetEase(Ease.InOutSine);
+        beatTexture.DOSizeDelta(new Vector2(300,300), 1).SetEase(Ease.InOutSine);
+        disclaimar.DOFade(0, 1).OnComplete(()=> disclaimar.gameObject.SetActive(false));
+        topArtistsManager.GetComponent<CanvasGroup>().DOFade(1, 1);
+        yield return new WaitForSeconds(2f);
+        topArtistsManager.StartGame();
+        //NOIZEventHandler.GoToMainScene();
     }
 }

@@ -455,10 +455,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3c6d81dd93fd4da42a7d086cc2eacb68, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ButtonScaler
+  hoverScale: 1.05
   pressedScale: 0.9
   duration: 0.1
   ease: 6
   originalScaleOne: 1
+  scaleOnHover: 1
 --- !u!114 &2087309186292730383
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -474,3 +476,6 @@ MonoBehaviour:
   artistImage: {fileID: 7530975777098852501}
   artistNameText: {fileID: 1671257861063296867}
   selectButton: {fileID: 3248868039791335280}
+  animDuration: 0.35
+  animDelay: 0
+  animEase: 27

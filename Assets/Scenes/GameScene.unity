@@ -2877,10 +2877,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LaneManager
   lanes:
+  - {fileID: 931484725}
+  - {fileID: 30284014}
+  - {fileID: 228411709}
   - {fileID: 1687588717}
   - {fileID: 803501936}
   - {fileID: 1663812469}
-  laneCooldown: 0.3
+  - {fileID: 781967081}
+  - {fileID: 1920443349}
+  - {fileID: 577966503}
+  laneCooldown: 0.4
   alternateLanes: 1
   preventSameLaneConsecutive: 1
   selectionMode: 0
@@ -3521,8 +3527,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 40
-  m_fontSizeBase: 40
+  m_fontSize: 30
+  m_fontSizeBase: 30
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -4169,6 +4175,8 @@ MonoBehaviour:
   audioSource: {fileID: 248222715}
   bufferSize: 1024
   FFTWindow: 1
+  beatCooldown: 0.15
+  smoothingFactor: 0.3
 --- !u!4 &1404805403
 Transform:
   m_ObjectHideFlags: 0

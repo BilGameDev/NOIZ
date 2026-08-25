@@ -106,7 +106,7 @@ MonoBehaviour:
   quickMoveDuration: 0.3
   quickMoveDistance: 5.4
   quickMoveEase: 9
-  slowMoveSpeed: 0.3
+  slowMoveSpeed: 0.2
   cuttableMinZ: -4.5
   cuttableMaxZ: 3
 --- !u!114 &5042758035591404267

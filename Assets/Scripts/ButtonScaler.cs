@@ -7,13 +7,15 @@ using UnityEngine.UI;
 /// Attach to any UI Button or 3D object.
 /// Scales up on pointer/mouse/touch down, scales back on release.
 /// </summary>
-public class ButtonScaler : MonoBehaviour, IPointerDownHandler, IPointerUpHandler, IPointerExitHandler
+public class ButtonScaler : MonoBehaviour, IPointerDownHandler, IPointerUpHandler, IPointerExitHandler, IPointerEnterHandler
 {
     [Header("Scale Settings")]
+    [SerializeField] private float hoverScale = .9f;
     [SerializeField] private float pressedScale = .9f;
     [SerializeField] private float duration = 0.1f;
     [SerializeField] private Ease ease = Ease.OutQuad;
     [SerializeField] private bool originalScaleOne = true;
+    [SerializeField] private bool scaleOnHover = false;
 
     private Vector3 originalScale;
     private Button button;
@@ -28,6 +30,7 @@ public class ButtonScaler : MonoBehaviour, IPointerDownHandler, IPointerUpHandle
     {
         if (button && !button.interactable) return;
         AnimateTo(originalScale * pressedScale);
+        NOIZAudioManager.Instance.PlayButton();
     }
 
     public void OnPointerUp(PointerEventData eventData)
@@ -39,6 +42,15 @@ public class ButtonScaler : MonoBehaviour, IPointerDownHandler, IPointerUpHandle
     {
         // if pointer leaves without releasing (drag away), reset
         AnimateTo(originalScale);
+    }
+
+    public void OnPointerEnter(PointerEventData eventData)
+    {
+        if (scaleOnHover)
+        {
+            AnimateTo(originalScale * hoverScale);
+            NOIZAudioManager.Instance.PlaySFX("Hover");
+        }
     }
 
     // For 3D clicks (mouse down / touch world collider)

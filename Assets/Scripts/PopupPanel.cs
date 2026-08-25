@@ -31,16 +31,16 @@ public class PopupPanel : MonoBehaviour
     public virtual void OpenPanel()
     {
         mainPanel.gameObject.SetActive(true);
-        mainPanel.DOScale(1, .5f).SetEase(Ease.OutQuad);
+        mainPanel.DOScale(1, .3f).SetEase(Ease.OutQuad);
         //mainPanel.anchoredPosition = new Vector2(mainPanel.anchoredPosition.x, -3000);
         //mainPanel.DOAnchorPos(mainCurrentPosition, .2f).SetEase(Ease.OutCubic);
-        canvasGroup.DOFade(1, 1);
+        canvasGroup.DOFade(1, .3f);
     }
 
     public virtual void ClosePanel()
     {
         NOIZEventHandler.ClosePopup();
-        canvasGroup.DOFade(1, 0).OnComplete(() => Destroy(gameObject));
+        canvasGroup.DOFade(0, .3f).OnComplete(() => Destroy(gameObject));
         //mainPanel.DOAnchorPosY(-3000, .2f).SetEase(Ease.InCubic).OnComplete(() => Destroy(gameObject));
     }
 }

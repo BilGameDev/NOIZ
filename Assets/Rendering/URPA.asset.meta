@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 2034824822b7d5c43b29e3742accc5ac
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 239345
+  packageName: MultiFPS - Multiplayer FPS
+  packageVersion: 1.5.10
+  assetPath: Assets/MultiFPS/Rendering/URPA.asset
+  uploadId: 870326

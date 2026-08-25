@@ -30,7 +30,7 @@ public class TopArtistsManager : MonoBehaviour
     private const int ITEMS_PER_PAGE = 25;
     private bool isLoadingMore = false;
     
-    void Start()
+    public void StartGame()
     {
         if (refreshButton != null)
             refreshButton.onClick.AddListener(RefreshTopArtists);
@@ -126,6 +126,7 @@ public class TopArtistsManager : MonoBehaviour
             ArtistResultItem itemUI = artistItem.GetComponent<ArtistResultItem>();
             if (itemUI != null)
             {
+                itemUI.animDelay = (i - startIndex) * 0.04f;
                 itemUI.Setup(artist, i, OnArtistSelected);
                 itemUI.SetBackgroundColor(i % 2 == 0 ? evenRowColor : oddRowColor);
             }

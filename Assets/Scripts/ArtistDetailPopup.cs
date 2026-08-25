@@ -30,7 +30,7 @@ public class ArtistDetailPopup : PopupPanel
 
     protected override void Awake()
     {
-        base.Awake();
+        //base.Awake();
         playButton.onClick.AddListener(OnPlayArtist);
     }
 
@@ -87,11 +87,15 @@ public class ArtistDetailPopup : PopupPanel
         // Wait for both to load
         yield return new WaitUntil(() => detailsLoaded && tracksLoaded);
 
+        yield return new WaitForSeconds(3);
+
         if (details != null && tracks != null)
         {
             currentArtist = details;
             currentTracks = tracks.Take(maxTracks).ToList();
-            ShowArtistDetails(details, currentTracks);
+
+            OnPlayArtist();
+            //ShowArtistDetails(details, currentTracks);
         }
         else
         {
